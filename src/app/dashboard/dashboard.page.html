@@ -1,0 +1,144 @@
+<ion-header class="header ion-no-border">
+  <div class="logo">
+    <img src="assets/icon/habsen.svg" alt="">
+  </div>
+  <ion-buttons>
+    <ion-badge slot="start" class="absolute z-10 mb-3 ml-4" color="primary">9+</ion-badge>
+    <ion-icon name="notifications-outline"
+      class="text-3xl text-white mr-3 bg-orange-600 hover:bg-orange-400 active:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 rounded-md"
+      (click)="notif()"></ion-icon>
+    <ion-icon name="person-circle-outline"
+      class="text-3xl text-white mr-2 hover:bg-orange-400 active:bg-orange-600 focus:outline-none focus:ring focus:ring-orange-500"
+      (click)="set()">
+    </ion-icon>
+  </ion-buttons>
+</ion-header>
+
+<ion-content>
+  <div class="container bg-warning rounded-b-3xl h-130">
+    <div class="flex flex-row justify-between">
+      <div class="flex flex-col text-white ml-5">
+        <p class="text-xl mt-10 ">Halo</p>
+        <p class="text-4xl font-bold">Rizka</p>
+        <p class="p1 mb-20">wali kelas dari <b>Level 1</b></p>
+      </div>
+    </div>
+  </div>
+
+  <ion-card class="-mt-10 p-5 rounded-lg">
+    <div class="flex flex-row justify-between">
+      <p class="-mt-3 mb-2 text-base font-bold text-black">5 Murid</p>
+      <p class="-mt-3 mb-2 text-base font-bold text-black">Level 1</p>
+    </div>
+
+    <div class="flex flex-row justify-start ml-3">
+      <div
+        class="z-40 -ml-5 text-lg font-bold text-white w-7 h-7 bg-warning rounded-full py-6 px-6 border-4 border-solid border-black">
+        5</div>
+      <div
+        class="z-30 -ml-10 text-lg font-bold text-white w-7 h-7 bg-warning rounded-full py-6 px-6 border-4 border-solid border-black">
+        4</div>
+      <div
+        class="z-20 -ml-10 text-lg font-bold text-white w-7 h-7 bg-warning rounded-full py-6 px-6 border-4 border-solid border-black">
+        3</div>
+      <div
+        class="z-10 -ml-10 text-lg font-bold text-white w-7 h-7 bg-warning rounded-full py-6 px-6 border-4 border-solid border-black">
+        2</div>
+      <div
+        class="z-0 -ml-10 text-lg font-bold text-white w-7 h-7 bg-warning rounded-full py-6 px-6 border-4 border-solid border-black">
+        1</div>
+    </div>
+
+  </ion-card>
+
+  <h5 class="ml-5">Dashboard</h5>
+  <ion-card class="rounded-lg bg-warning">
+
+
+    <!-- apps menu -->
+    <div class="container grid grid-cols-3 my-2 md:grid-cols-4 mt-5">
+      <div>
+        <ion-card class="p-2 m-3 rounded-xl ion-activatable ripple-parent" routerLink="/viewattedance">
+          <ion-card-content class="p-0">
+            <div class="flex flex-col items-center justify-center">
+              <img src="assets/img/dashboard/absensidatang.svg" alt="" class="p-1">
+            </div>
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+        <div class="flex flex-col items-center justify-center">
+          <ion-label class="p-1 text-sm text-center text-black leading-4 font-medium w-20">Absensi Masuk
+          </ion-label>
+        </div>
+      </div>
+
+      <div>
+        <ion-card class="p-2 m-3 rounded-xl ion-activatable ripple-parent" routerLink="/out-class">
+          <ion-card-content class="p-0">
+            <div class="flex flex-col items-center justify-center">
+              <img src="assets/img/dashboard/absensipulang.svg" alt="" class="p-1">
+            </div>
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+        <div class="flex flex-col items-center justify-center">
+          <ion-label class=" text-sm text-center text-black leading-4 w-20 font-medium">Absensi Pulang
+          </ion-label>
+        </div>
+      </div>
+
+      <div>
+        <ion-card class="p-2 m-3 rounded-xl ion-activatable ripple-parent" routerLink="/view-student">
+          <ion-card-content class="p-0">
+            <div class="flex flex-col items-center justify-center">
+              <img src="assets/img/dashboard/student.svg" alt="" class="p-1">
+            </div>
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+        <div class="flex flex-col items-center justify-center">
+          <ion-label class="p-1 text-sm text-center text-black leading-4 font-medium">Data Murid
+          </ion-label>
+        </div>
+      </div>
+
+      <div>
+        <ion-card class="p-2 m-3 rounded-xl ion-activatable ripple-parent">
+          <ion-card-content class="p-0">
+            <div class="flex flex-col items-center justify-center">
+              <img src="assets/img/dashboard/history.svg" alt="" class="p-1">
+            </div>
+          </ion-card-content>
+          <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+        <div class="flex flex-col items-center justify-center">
+          <ion-label class="p-1 text-sm text-center text-black leading-4 font-medium">Riwayat
+          </ion-label>
+        </div>
+      </div>
+
+    </div>
+  </ion-card>
+
+  <h5 class="ml-5">Absensi </h5>
+  <ion-card class="flex flex-row rounded-lg">
+    <ion-card-header class="text-xl font-semibold text-black">
+      Siapkan Absensi sebelum masuk kelas
+      <p class="mt-2 text-sm font-medium opacity-60">
+        pastikan data murid yang akan di absensi
+        sudah terdaftar dikelasnya
+      </p>
+      <ion-button class="mt-3">Klik disini</ion-button>
+    </ion-card-header>
+    <img src="assets/img/dashboard/attedance.svg" alt="" class="w-36 mr-3">
+  </ion-card>
+
+
+  <div class="flex flex-row justify-between -mb-4 -mt-3">
+    <h5 class="ml-5  font-medium">info Profile</h5>
+
+  </div>
+  <ion-card button class=" card1 rounded-lg">
+    <img src="assets/icon/lengpro.svg" alt="">
+  </ion-card>
+</ion-content>

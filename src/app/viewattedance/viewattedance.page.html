@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="flex flex-row justify-between p-2">
+    <h2 class="ml-2 text-start text-2xl font-bold">Absensi Hari Ini</h2>
+  </div>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="assets/icon/avatar.svg" />
+      </ion-avatar>
+      <ion-label>
+        <h2><b>Finn</b></h2>
+        <h3>Status:</h3>
+      </ion-label>
+      <ion-badge>Hadir</ion-badge>
+    </ion-item>
+  </ion-list>
+
+
+
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom" routerLink="/enter-class">
+    <ion-fab-button color="warning">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
